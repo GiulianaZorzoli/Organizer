@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+:root{
+    --background-color:#FCF7EC;
+    --background-color-almost-all-opacity:#fcf7ecb5;
+    --background-color-low-opacity:#fcf7eca9;
+    --lighter-color:#ebf3eb;
+    --even-lighter-color:#f5fdf5;
+    --light-green-color:#d5e4cf;
+    --dark-green-color:#afc2ae;
+    --darker-green-color:#779779;
+    --darker-green-color-low-opacity:#617b62d7;
+    --medium-darker-green:#58715a;
+    --even-darker-color:#374738;
+
+    --background-img:url('../img/leaves2.jpeg')
+}
+body,html{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-img);
+
+}
+.principal{
+    height: 100%;    
+    background-color: var(--background-color-low-opacity);
+}
+
+.screen.hidden{
+    display: none;
+}
+.article .screen{
+    width: 100%;
+    height: 100%;
+}
+i{
+    color:#597552;
+}
+.popup-box.popup-hidden{
+    display: none;
+}
+/*HEADER*/
+.header{
+    background-color: var(--light-green-color);
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    height: 20%;
+    z-index: 3;
+    
+}
+.menu-button-widget{
+    display: flex;
+    padding: .5rem;
+    cursor: pointer;
+    position: absolute;
+}
+#menu-button{
+    padding: .5rem;
+}
+.web-section-widget{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuTitle{
+    font-weight: bold;
+}
+/*ARTICLE*/
+.article{
+    display: flex;
+    height: 80%;
+    position:relative;
+}
+/*MENU*/
+.mostrar-menu{
+    left: -18em;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index:20;
+    background-color: var(--darker-green-color);
+    transition: all .3s;
+}
+.mostrar{
+    left:0;
+}
+.menu-container{
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.menu-option{
+    font-size: 1.2rem;
+    text-align: center;
+    padding: .5rem;
+    border: solid;
+    border-radius: 2px;
+    border-color: transparent;
+    cursor: pointer;
+}
+.menu-option:hover{
+    border: solid;
+    border-color:var(--dark-green-color);
+    transition: all .2s ease;
+}
+.focus-option{
+    background-color: var(--dark-green-color);
+}
+
+/*ONE*/
+.home-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home-widget{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+}
+.title{
+    margin: 1.5rem;
+    background-color: var(--darker-green-color);
+    padding: .5rem 1rem;
+    box-shadow: -10px 10px 0px 1px var(--medium-darker-green);
+    color: white;
+    text-shadow:-1.5px 1.5px var(--even-darker-color);
+    font-size: 2rem;
+}
+.cant{
+    font-size: 1.2rem;
+}
+
+/*TWO*/
+#two{
+    height: 90%;
+    overflow-y: scroll;
+}
+#two::-webkit-scrollbar {
+    width: 12px;
+    background-color:transparent;
+}
+
+#two::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+}
+
+#two::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:var(--darker-green-color);
+}
+.to-do-screen{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2rem;
+    width: 100%;
+}
+.to-do-widget{
+    background-image: url('../img/leaves2-medOp.jpg');
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    width: 70%;
+}
+.newToDo{
+    display: flex;
+    background-color: var(--light-green-color);
+    border-radius: 4px;
+    margin-bottom: .5rem;
+    padding: .5rem;
+}
+.newToDo input{
+    border:solid;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: .5rem;
+    margin-right: .5rem;
+    outline: none;
+    flex-grow: 1;
+}
+.newToDo button{
+    border: none;
+    border-radius: 4px;
+    padding: .5rem;
+    cursor: pointer;
+    color: white;
+    background-color: var(--darker-green-color);
+}
+.newToDo button:hover{
+    background-color: var(--even-lighter-color);
+    color: var(--even-darker-color);
+}
+.newToDo input:focus{
+    border: solid;
+    border-color: var(--darker-green-color);
+}
+.toDoDiv{
+    background-color: var(--light-green-color);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    
+}
+.toDoDiv input{
+    width:1.5rem;
+    height:1.5rem;
+    accent-color:var(--darker-green-color);
+}
+.toDoDiv li{
+    list-style: none;
+    cursor: pointer;
+}
+/*THREE*/
+.calendar-screen{
+    display: flex;
+    justify-content: center;
+}
+.calendar-widget{
+    margin: 2rem 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+.calendarContainer{
+    margin:1rem;
+    background-color: var(--even-lighter-color);
+    border-radius: 20px;
+    flex-grow: 1;
+    height: 100%;
+    -webkit-box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+    -moz-box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+    box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+}
+.monthWidget{
+    display: flex;
+    justify-content: space-between;
+    padding: .8rem;
+    margin: 1rem .5rem;
+}
+.monthWidget i{
+    cursor: pointer;
+}
+.daysName{
+    display: flex;
+    display: grid;
+    grid-template: 1fr/repeat(7,1fr);
+    justify-items: center;
+
+}
+.daysNumber{
+    display: grid;
+    grid-template:repeat(6,1fr)/repeat(7,1fr);
+    justify-items: center;
+}
+.daysNumber li{
+    padding: 1.2rem;
+    width: 100%;
+    margin: 0 .5rem;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;  
+}
+.inactiveDays{
+    color: rgb(96, 101, 97);
+}
+.today{
+    color: var(--darker-green-color);
+    text-decoration: underline var(--darker-green-color);
+    font-weight: bold;
+}
+.active{
+    background-color: rgb(212, 229, 213)
+}
+.daysNumber li:hover{
+    background-color: var(--dark-green-color);
+    color: white;
+}
+.calendarDate{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+.calendarDate p{
+    width: 100%;
+    text-align: center;
+}
+.todayEvents{
+    margin: 1rem;
+}
+.todayEvents div{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.events{
+    color: var(--light-green-color);
+    margin: 11rem;
+    text-align: center;
+}
+.trashEvents{
+    color: white;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.dayInfo{
+    background-image: url('../img/leaves2-lowOp.jpg');
+    margin: 1rem 0;
+    margin-right: 1rem;
+    height: 100%;
+    border-radius: 20px;    
+    width: 35%;
+    color: white;
+    -webkit-box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+    -moz-box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+    box-shadow: 6px 5px 21px -7px rgba(42,54,33,0.49);
+}
+.dayInfo .evenstsContainer{
+    margin: 1rem;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+}
+
+.evenstsContainer div label{
+    font-size: .85rem;
+    color:var(--light-green-color);
+}
+.evenstsContainer div div{
+    display: flex;
+}
+.evenstsContainer div div input{
+    flex-grow: 1;
+    width: 80%;
+    margin: .5rem .5rem 0 0;
+    padding: .2rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    background-color: var(--light-green-color);
+}
+.evenstsContainer div div button{
+    margin: .5rem .5rem 0 0;
+    padding: .2rem;
+    border-radius:.3rem;
+    border: none;
+    background-color: var(--even-lighter-color);
+    cursor: pointer;
+}
+.evenstsContainer div div button:hover{
+    background-color: var(--medium-darker-green);
+    color: white;
+}
+/*FOUR*/
+.notes-screen{
+    display: flex;
+    justify-content: center;
+}
+.notes-widget{
+    width: 100%;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,16rem);
+    gap: 1rem;
+    justify-content: center;
+    overflow-y: scroll;
+}
+.notes-widget::-webkit-scrollbar {
+    width: 12px;
+    background-color:transparent;
+}
+
+.notes-widget::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+}
+
+.notes-widget::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:var(--darker-green-color);
+}
+
+.notes-widget li{
+    background-color: var(--lighter-color);
+    list-style: none;
+    height: 16rem;
+    border-radius: 5px;
+    padding: 1.2rem;
+}
+.add-box, .icon, .noteBottom, .noteSettings .note-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box{
+    flex-direction: column;
+    justify-content: center;
+}
+.add-box .icon{
+    height: 4.5rem;
+    width: 4.5rem;
+    border: 2px dashed var(--darker-green-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    justify-content: center;
+}
+.add-box p{
+    color: var(--even-darker-color);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.noteTitle{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:var(--even-darker-color) ;
+}
+.noteText, .noteDay{
+    color: var(--medium-darker-green);
+}
+
+.noteText{
+    height: 125px;
+}   
+
+.noteBottom{
+    border-top: 1px solid var(--darker-green-color);
+    padding-top: .7rem;
+}
+.notes-widget .note{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.noteDay{
+    font-size: .8rem;
+}
+.noteSettings{
+    cursor: pointer;
+    position: relative;
+}
+.noteSettings .note-menu li{
+    height: 2rem;
+    font-size: .8rem;
+    border-radius: 0;
+    justify-content: flex-start;
+}
+.noteSettings .note-menu{
+    position: absolute;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    bottom:0;
+    right: -5px;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.2s ease;
+}
+.noteSettings.show .note-menu{
+    transform: scale(1);
+}
+.note-menu li i{
+    padding: .5rem;
+    margin: 0;
+}
+.note-menu li:hover{
+    background-color: var(--dark-green-color);
+}
+.popup-box{
+    width: 100%;
+    position: fixed;
+    height: 80%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.popup-box .popup{
+    position: absolute;
+    z-index: 2;
+    max-width: 320px;
+    width: 100%;
+}
+.popup-content{
+    background-color: var(--even-lighter-color);
+    border-radius: 5px;
+}
+.popup-content header{
+    border-bottom: 2px solid var(--dark-green-color);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.popupTitle{
+    font-weight: bold;
+}
+.popup-content header i{
+    padding-right: .5rem;
+    cursor: pointer;
+}
+.popup-content form{
+    margin: 1rem 1.5rem 2rem;
+}
+.popup-content form .row{
+    margin-bottom: 1.2rem;
+}
+.popup-content form :where(input,textarea){
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--dark-green-color);
+    outline: none;
+    height: 3rem;
+}
+.popup-content form textarea{
+    height:150px;
+    padding: .5rem;
+}
+.popup-content form input{
+    padding-left: .5rem;
+}
+
+form .row label{
+    display: block;
+    margin-bottom: 6px;
+}
+form button{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--dark-green-color);
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width:819px){
+    .screen{
+        overflow-x: hidden;
+    }
+    .header{
+        z-index: 3;
+    }
+    .home-widget .title{
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+    }
+    .mostrar-menu{
+        background-color: var(--darker-green-color-low-opacity);
+    }
+    .menu-option{
+        background-color:#a1bd9a7f;
+    }
+    .to-do-screen{
+        overflow: visible;
+    }
+    .to-do-widget{
+        width: 100%;
+    }
+    .newToDo input{
+        padding: .2rem;
+    }
+    .newToDo button{
+        padding: .2rem;
+    }
+    .toDoDiv{
+        display: grid;
+        grid-template: 1fr/1fr 70% 1fr;
+        text-align: center;
+    }
+    .toDoDiv input, .toDoDiv li {
+        place-self: center center;
+    }
+    .calendar-widget{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendarContainer{
+        width: 300px;
+        height: auto;
+        max-height: 50%;
+        display: grid;
+        grid-template: 1fr 80%/1fr;
+        grid-template-areas: "header header header header header header header"
+                            " dayname dayname dayname dayname dayname dayname dayname"
+    }
+    .monthWidget{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        padding: 0 .2rem;
+        grid-area: header;
+    }
+    .calendar{
+        align-self: center center;
+    }
+    .daysName{
+        grid-area: dayname;
+    }
+    .daysNumber li{
+        padding: .15rem;
+    }
+    .dayInfo{
+        width: 300px;
+        margin: 0;
+    }
+    .calendarDate{
+        margin: 1rem;
+    }
+    .notes-widget{
+        overflow: visible;
+    }
+}
+
+@media (max-width:364px){
+    .web-section{
+        font-size: 20px;
+    }
+    #menu-button{
+        padding-right: 0;
+    }
+    .mostrar-menu{
+        height: 100%;
+    }
+    .article{
+        height: 85%;
+    }
+    .menu-container{
+        justify-content: space-around;    
+    }
+    .menu-option{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .header{
+        padding:.5rem 0;
+        height: 15%;
+    }
+    .to-do-screen{
+        margin: .9rem .2rem .2rem .9rem;
+        display: flex;
+        justify-content: center;
+    }
+    .to-do-screen .to-do-widget{
+        width: 100%;
+        background-color: red;
+        padding: .4rem;
+    }
+    .calendarContainer{
+        width: 260px;
+    }
+    .dayInfo{
+        width: 260px;
+    }
+    .daysNumber li{
+        padding: .07rem;
+    }
+    .notes-widget{
+        margin: .3rem;
+        
+    }
+}

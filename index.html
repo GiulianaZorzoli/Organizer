@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organizer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+    <main class="principal">
+        <header class="header">
+            <div class="menu-button-widget menu" id="menu-button-widget">
+                <span class="menu"><i class="fa-solid fa-bars menu" id="menu-button"></i><span class="menuTitle menu"> MENU </span></i>
+            </span></div>
+            <div class="web-section-widget">
+                <h1 class="web-section" id="web-section">HOME</h1>
+            </div>
+            <div class="day-widget">
+            </div>
+        </header>
+        <article class="article">
+            <!--MENU-->
+            <div class="mostrar-menu menu" id="mostrar-menu">
+                <section class="menu-container menu-hidden menu" id="menu-container">
+                    <h4 class="menu-option home focus-option menu" id="home-option">Home</h4>
+                    <h4 class="menu-option to-do menu" id="to-do-option">To-Do</h4>
+                    <h4 class="menu-option calendar menu" id="calendar-option">Calendar</h4>
+                    <h4 class="menu-option notes menu" id="notes-option">Notes</h4>
+                </section>
+            </div>
+            
+            <!--ONE (HOME)-->
+            <section class="home-screen screen" id="one">
+                <div class="home-widget">
+                    <h2 class="title">KEEP YOUR LIFE ORGANIZED</h2>
+                </div>
+            </section>
+            <!--TWO (TO-DO)-->
+            <section class="to-do-screen hidden screen" id="two">
+                <div class="to-do-widget" id="to-do-widget">
+                    <section class="newToDo" id="newToDo">
+                        <input type="text" placeholder="New To-Do" id="newToDoText">
+                        <button class="addNewToDo" id="addNewToDo">Add</button>
+                    </section>
+                </div>
+            </section>
+            <!--THREE (CALENDAR)-->
+            <section class="calendar-screen hidden screen" id="three">
+                <div class="calendar-widget">
+                    <article class="calendarContainer">
+                        <nav class="monthWidget">
+                            <i class="fa-solid fa-chevron-left" id="prevMonth"></i>
+                            <p class="month" id="currentDate"></p>
+                            <i class="fa-solid fa-chevron-right" id="nextMonth"></i>
+                        </nav>
+                        <section class="calendar">
+                            <div class="daysName">
+                                <p class="sunday">Sun</p>
+                                <p class="monday">Mon</p>
+                                <p class="tuesday">Tue</p>
+                                <p class="wednesday">Wed</p>
+                                <p class="Thursday">Thu</p>
+                                <p class="friday">Fri</p>
+                                <p class="saturday">Sat</p>
+                            </div>
+                            <div class="daysNumber" id="daysNumber">
+                            </div>
+                        </section>
+                    </article>
+                    <article class="dayInfo DI">
+                        <header class="calendarDate DI">
+                            <p id="selectedDate" class="DI"></p>
+                        </header>
+                        <div class="evenstsContainer DI">
+                            <div class="DI">
+                                <label for="#" class="DI">New Task/Event</label>
+                                <div class="DI">
+                                    <input type="text" class="DI" id="eventInput" placeholder="New Event">
+                                    <button id="eventSubmit" class="DI">Add</button>
+                                </div>
+                            </div>
+                            <ul class="todayEvents DI" id="todayEvents">
+                            </ul>
+                        </div>
+                        
+                    </article>
+                </div>
+                
+            </section>
+            <!-- FOUR (NOTES)-->
+            <section class="notes-screen hidden screen" id="f">
+                <div class="popup-box popup-hidden" id="popup-box">
+                    <div class="popup">
+                        <div class="popup-content">
+                            <header>
+                                <p class="popupTitle" id="popupTitle">Add a new Note</p>
+                                <i class="fa-solid fa-xmark" id="close-popup"></i>
+                            </header>
+                            <form action="#">
+                                <div class="newNoteTitle row">
+                                    <label>Title</label>
+                                    <input type="text" id="newNoteTitle">
+                                </div>
+                                <div class="newNoteDesc row">
+                                    <label>Description</label>
+                                    <textarea id="newNoteDesc"></textarea>
+                                </div>
+                                <button id="newNoteButton">Add Note</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes-widget" id="notes-widget">
+                    <li class="add-box" id="add-box">
+                        <div class="icon"><i class="fa-regular fa-plus" style="color: #597552;"></i></div>
+                        <p>Add new note</p>
+                    </li>
+                    </li>
+                    </li>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
